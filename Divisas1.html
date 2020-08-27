@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DIVISAS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container p-3 border">
+  <h2>Conversor de Divisas</h2>
+  <form action="/cambiarmoneda" method="POST" id="cambiarmoneda">
+    <div class="form-group">
+      <label for="cantidad">Cantidad</label>
+      <input type="text" class="form-control" id="Cantidad" id="valor" name="cantidad" onchange="convertir()">
+    </div>
+    <div class="dropdown">
+    	<label for="Convertird">Calcular de:</label>
+		<select class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="de" onchange="convertir()">
+			<option value="1">Soles</option>
+			<option value="2">Dolares</option>
+			<option value="3">Euros</option>
+		</select><br><br>
+    </div>
+    <div class="dropdown">
+    	<label for="Convertira">Calcular a:</label>
+		<select class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="a" onchange="convertir()">
+			<option value="1">Soles</option>
+			<option value="2">Dolares</option>
+			<option value="3">Euros</option>
+		</select><br><br>
+    </div>
+    <label class="font-weight-bolder" id="resultado">Resultado: $0.00</label><br>
+    <button type="submit" class="btn btn-primary">Comprar</button>
+  </form>
+</div>
+	<script>
+		function convertir() {
+			var valor=parseFloat(document.getElementById("Cantidad").value);
+			var de=document.getElementById("de").value;
+			var a=document.getElementById("a").value;
+			var aleatorio = Math.random();
+			var dolar=3+aleatorio;
+			var euro=4+aleatorio;
+			resultado=0;
+			costo="";
+			//soles a dolares
+			if(de==1&&a==2){
+				resultado=valor/dolar;
+				costo="\nEl valor del dolar es: "+dolar;
+			}
+			//soles a euro
+			else if(de==1&&a==3){
+				resultado=valor/euro;
+				costo="\nEl valor del euro es: "+euro;
+			}
+			//dolar a soles
+			else if(de==2&&a==1){
+				resultado=valor*dolar;
+				costo="\nEl valor del dolar es: "+dolar;
+			}
+			//dolar a euro
+			else if(de==2&&a==3){
+				resultado=valor*(dolar/euro);
+				costo="\nEl valor del euro es: "+euro;
+			}
+			//euro a soles
+			else if(de==3&&a==1){
+				resultado=valor*euro;
+				costo="\nEl valor del euro es: "+euro;
+			}
+			//euro a dolar
+			else if(de==3&&a==2){
+				resultado=valor*(euro/dolar);
+				costo="\nEl valor del dolar es: "+dolar;
+			}
+			//soles a soles
+			else{
+				resultado=valor;
+			}
+			document.getElementById("resultado").innerHTML="Resultado: $"+resultado.toFixed(2)+costo;
+		}
+	</script>
+</body>
+</html>
