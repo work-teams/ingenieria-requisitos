@@ -51,7 +51,7 @@
     }
 
     #peque{
-      font-size: 20px;
+      font-size: 25px;
     }
 
     .volverini:hover{
@@ -70,7 +70,7 @@
     }
     footer {
       position: absolute;
-      bottom: 0px; 
+      bottom: 0px;
       height: 40px;
       border: 1px solid #000;
       background: #0d0c0c;
@@ -82,6 +82,9 @@
     .define{
       background-color: black;
     }
+    .titulop{
+      font-family: 'Alata', sans-serif;
+    }
   </style>
 </head>
 <body class="fondo">
@@ -89,29 +92,25 @@
   <nav class="nav nav-pills navegacion flex-column bg-dark flex-sm-row">
     <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="#">SmartMoney</a>
     <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="invertir.php">Invertir</a>
-    <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="#">Gráficos</a>
-    <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="#">Usuario</a>
+    <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="grafico.php">Gráficos</a>
+    <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="usuario.php">Usuario</a>
     <a class="flex-fill text-center salir nav-link bg-dark m-1 p-2" href="php/salir.php">Salir</a>
 
   </nav>
 
-  <div class="">
-    <section class="seccion">
+  <div class="mt-3">
+    <section class="">
         <article>
             <hgroup class="titulo">
-                <h1 class="text-light">Smart Money</h1>
-                <h2 id="peque" class="text-light">Curso: Ingeniería de requisitos</h2>
+                <h1 class="text-light titulop">Smart Money</h1>
+                <h2 id="peque" class="text-light titulop">Curso: Ingeniería de requisitos</h2>
                 <img src="img/fisi.png"/>
                 <a class="dir" href="https://sistemas.unmsm.edu.pe/">Ir a FISI</a>
             </hgroup>
         </article>
-        <footer>
-            <div class="define">
-                <p>Derechos reservados 2020</p>
-            </div>
-    </footer>
     </section>
   </div>
+  
 
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

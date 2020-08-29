@@ -33,6 +33,11 @@
 			width:auto;
 			height: 100vh;
 		}
+
+		.tabla{
+			overflow:scroll;
+     		height:450px;
+		}
 	</style>
 
 </head>
@@ -41,15 +46,15 @@
 <nav class="nav nav-pills navegacion flex-column bg-dark flex-sm-row">
     <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="principal.php">SmartMoney</a>
     <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="invertir.php">Invertir</a>
-    <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="#">Gráficos</a>
-    <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="#">Usuario</a>
+    <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="grafico.php">Gráficos</a>
+    <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="usuario.php">Usuario</a>
     <a class="flex-fill text-center salir nav-link bg-dark m-1 p-2" href="php/salir.php">Salir</a>
 
 </nav>
-<div class="container bg-light p-3 border mt-3">
+<div class="container bg-light p-3 border mt-3 rounded">
 	<div class="row">
 		<div class="col-md-6">
-			<h2>Conversor de Divisas</h2>
+			<h2 class="ml-4">Conversor de Divisas</h2>
 			<form action="php/transaccion.php" method="POST" id="">
 				<div class="form-group col-md-8 ml-3">
 				<label for="cantidad">Cantidad</label>
@@ -57,23 +62,22 @@
 				</div>
 				<div class="dropdown  col-md-8 ml-3">
 					<label for="Convertird">Calcular de:</label>
-					<select class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="de" onchange="convertir()">
+					<select class="btn btn-primary dropdown-toggle ml-1" data-toggle="dropdown" id="de" onchange="convertir()">
 						<option value="1">Soles</option>
 						<option value="2">Dolares</option>
 						<option value="3">Euros</option>
 					</select><br><br>
 				</div>
-				<div class="dropdown  col-md-8 ml-3">
+				<div class="dropdown col-md-8 ml-3">
 					<label for="Convertira">Calcular a:</label>
-					<select class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="a" onchange="convertir()">
+					<select class="btn btn-primary dropdown-toggle ml-1" data-toggle="dropdown" id="a" onchange="convertir()">
 						<option value="1">Soles</option>
 						<option value="2">Dolares</option>
 						<option value="3">Euros</option>
 					</select><br><br>
 				</div>
 				<label class="font-weight-bolder mb-3 ml-3 col-md-4" id="resultado">Resultado: 0.00</label><br>
-				<label  class="font-weight-bolder mb-3 col-md-4 ml-3" id="costo"></label><br>
-				<label  class="font-weight-bolder mb-3 col-md-4 ml-3" id="costo2"></label><br>
+				<label  class="font-weight-bolder mb-3 col-md-8 ml-3" id="costo"></label><br>
 				<div class="auto" id="auto" style="display:none">
 					<input class="ml-3" id="dolar" name="dolar"></input>
 					<input class="ml-3" id="euro" name="euro"></input>
@@ -81,14 +85,14 @@
 
 				</div>
 
-				<input type="submit" class="btn ml-3 btn-success" id="registrarCompra" value="Comprar"></input>
+				<input type="submit" class="btn ml-4 btn-success" id="registrarCompra" value="Comprar"></input>
 				<a href="invertir.php" class="btn btn-danger">Cancelar</a>
 			</form>
 		</div>
-		<div class="col-md-6">
-		<table class="table table-striped">
+		<div class="col-md-6 tabla">
+		<table class="table mt-2 table-bordered table-hover">
         <thead>
-            <tr>
+            <tr class="bg-primary text-white">
                 <th>Compra</th>
                 <th>Precio Dolar</th>
                 <th>Precio Euro</th>
@@ -214,20 +218,12 @@ if ($inc) {
 					var resultado = document.getElementById("Cantidad").value;
 					document.getElementById("resultado").innerHTML="Resultado: " + resultado;
 					document.getElementById("costo").innerHTML="";
-					
-					
-				}
-				
+				}	
 			}
 		}
 
 
-		(document).ready(function(){
-			$('#registrarCompra').click(function(){
 
-				alertify.success("Compra realizada con éxito.");
-			});
-		});
 
 
 

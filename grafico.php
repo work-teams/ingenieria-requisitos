@@ -28,42 +28,14 @@
       background-repeat: no-repeat;
       background-size: cover;
       width:auto;
-      height: 100%;
+      height: 100vh;
     }
     .navegacion{
       border-bottom: 2px solid black;
     }
-    .imgv{
-        margin: 5px;
-        padding: 2px;
-        border: 0.5px solid white;
-    }
-    .invertir{
-        border: 0.5px solid black;
-    }
-    .con{
-        position: relative;
-        display: inline-block;
-        text-align: center;
-    }
-    .botonEnlace{
-        position: absolute;
-        bottom: 5%;
-        left: 27%;
-        transform: translate(-50%, -50%);
-        background-color: #01541c;
-        color: white;
-        font-family: 'Alata', sans-serif;
-        border: 0.5px solid black;
-    }
 
-    .botonEnlace:hover{
-        color: white;
-        background-color: #14a342;
-    }
-    .chref{
-        text-decoration
-    }
+    
+
   </style>
 </head>
 <body class="fondo">
@@ -75,38 +47,11 @@
     <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="usuario.php">Usuario</a>
     <a class="flex-fill text-center salir nav-link bg-dark m-1 p-2" href="php/salir.php">Salir</a>
   </nav>
-
   <div class="container mt-4">
-      <div class="row">
+    <div class="row">
         <h3 class="col-4"></h3>
-        <h3 class="text-center col-md-4 rounded text-light mx-3 py-2 invertir bg-success">Invertir</h3>
+        <h3 class="text-center col-md-4 rounded text-light mx-3 py-2 invertir bg-warning">Gráficos</h3>
         <h3 class="col-4"></h3>
-      </div>
-      <div class="row">
-          <div class="col-2"></div>
-          <div class="col-8">
-            <div class="row">
-                <div class="col-md-6 col-12 con">
-                    <img src="img/bitcoin.jpg" class="rounded img-fluid imgv" alt="">
-                    <a class="btn botonEnlace" href="#">BITCOIN</a>
-                </div>
-                <div class="col-md-6 col-12 con">
-                    <img src="img/cambio.jpg" class="rounded img-fluid imgv" alt="">
-                    <a class="btn botonEnlace" href="divisas.php">DIVISAS</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-12 con">
-                    <img src="img/beneficio.jpg" class="rounded img-fluid imgv" alt="">
-                    <a class="btn botonEnlace" href="#">BONOS</a>
-                </div>
-                <div class="col-md-6 col-12 con">
-                    <img src="img/visualiza.jpg" class="rounded img-fluid imgv" alt="">
-                    <a class="btn botonEnlace" href="#">ACCIONES</a>
-                </div>
-            </div>
-          </div>
-          <div class="col-2"></div>
       </div>
   </div>
   

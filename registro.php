@@ -68,14 +68,14 @@
 					</div>
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
 						<label for="">Correo Electrónico</label>
-						<input type="text" id="correo" class="form-control" placeholder="Correo electrónico">
+						<input type="email" id="correo" class="form-control" placeholder="Correo electrónico">
 					</div>
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
 						<label for="">Contraseña</label>
 						<input type="password" id="password" class="form-control" placeholder="Contraseña">
 					</div>
 				</div>
-				<div class="form-row justify-content-around botones">
+				<div class="form-row justify-content-around botones my-2">
 					<div class="col-3 col-sm-2 col-md-2 col-lg-1 col-xl-1">
 						<a href="index.php" class="btn btn-success d-block ">Ingresar</a>
 					</div>

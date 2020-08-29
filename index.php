@@ -18,7 +18,7 @@
 <style>
 	html{
 		box-sizing: border-box;
-		font-size: 62.5%; /*Reser para Rems - 62.5 = 10pxde 16 px ++*/
+		font-size: 70.5%; /*Reser para Rems - 62.5 = 10pxde 16 px ++*/
 	}
 
 	*, *::before, *:after{
@@ -42,12 +42,13 @@
 		font-size: 3.5rem;
 		font-weight: bold;
 	}
+
 </style>
 </head>
 
 <body class="fondoindex">
 
-	<div class="container fluid">
+	<div class="container">
     	<div class="row mt-4 justify-content-center">
 			<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
 				<p class="text-light text-center titulot p-4">SMART MONEY</p>
@@ -57,7 +58,7 @@
 			    			<h3 class="panel-title encabezado text-light text-center m-3">Iniciar sesión</h3>
 			 			</div>
     			<div class="row justify-content-center">
-					<div class="col-8  panel panel-default">
+					<div class="col-8 panel panel-default">
 			  			<div class="panel-body">
 			    			<form accept-charset="UTF-8" role="form" action="" method="" name="">
                     			<fieldset>
@@ -75,9 +76,9 @@
 									</div>
 
 									<div class="form-group mt-3 pl-2 pr-2">
-										<span class="btn btn-success d-block" id="entrarSistema">Entrar</span>
+										<span class="btn btn-success d-block btn-lg" id="entrarSistema">Entrar</span>
 									</div>
-									<p class="text-light text-center m-2">¿No tienes cuenta aún? <a href='registro.php'>Regístrate</a></p>
+									<h5 class="text-light text-center m-2">¿No tienes cuenta aún? <a href='registro.php'>Regístrate</a></h5>
 			    				</fieldset>
 			      			</form>
 			    		</div>
