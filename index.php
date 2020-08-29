@@ -10,7 +10,7 @@
 
 <title>Smart Money</title>
 
-<?php require_once "scripts2.php";?>
+<?php require_once "php/scripts2.php";?>
 
 
 <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
