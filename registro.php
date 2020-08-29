@@ -10,7 +10,7 @@
         background-repeat: no-repeat;
         background-size: cover;
 		width:auto;
-		height: 100%;
+		height: 100vh;
 	}
 	.encabezado{
 		font-size: 30px;
