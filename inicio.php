@@ -15,8 +15,6 @@
 	<meta charset="utf-8">
 	<?php require_once "scripts2.php"; ?>
 
-
-
 </head>
 <body>
 	<!--

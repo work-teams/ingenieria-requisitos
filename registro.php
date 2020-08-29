@@ -24,77 +24,66 @@
 <body class="fondoRegistro">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-lg-1 col-md-1"></div>
-			<div class="col-sm-12 col-md-10 col-12 col-lg-10">
+			<div class="col-12">
 				<div class="panel panel-danger mt-4">
-					<div class="col-12">
-						<h1 class="text-dark text-center titulot">SMART MONEY</h1>
-						<p class="text-dark encabezado text-center">Registro de usuario</p>
-					</div>
-					<div class="panel panel-body">
-						<form id="frmRegistro">
-							<div class="form-row m-1">
-    							<div class="col m-1">
-									<label for="">Primer Nombre</label>
-      								<input type="text" id="primerNombre" class="form-control" placeholder="Primer Nombre">
-								</div>
-    							<div class="col m-1">
-									<label for="">Segundo Nombre</label>
-     								 <input type="text" id="segundoNombre" class="form-control" placeholder="Segundo Nombre">
-								</div>
-								<div class="col m-1">
-									<label for="">Primer Apellido</label>
-      								<input type="text" id="primerApellido" class="form-control" placeholder="Primer Apellido">
-								</div>
-								<div class="col m-1">
-									<label for="">Segundo Apellido</label>
-     								 <input type="text" id="segundoApellido" class="form-control" placeholder="Segundo Apellido">
-    							</div>
-							</div>
-							<div class="form-row m-1">
-    							<div class="col m-1">
-									<label for="">Numero DNI</label>
-      								<input type="text" id="dni" class="form-control" placeholder="DNI">
-    							</div>
-    							<div class="col m-1">
-									<label for="">Teléfono</label>
-     								<input type="text" id="telefono" class="form-control" placeholder="Teléfono">
-								</div>
-								<div class="col m-1">
-									<label for="">Fecha Nacimiento</label>
-									<input class="form-control" id="fechaNac" type="date" value="" id="example-date-input">
-    							</div>
-							</div>
-							<div class="form-row m-1">
-    							<div class="col m-1">
-									<label for="">Usuario</label>
-      								<input type="text" id="usuario" class="form-control" placeholder="Usuario">
-								</div>
-								<div class="col m-1">
-									<label for="">Correo Electrónico</label>
-      								<input type="text" id="correo" class="form-control" placeholder="Correo electrónico">
-    							</div>
-    							<div class="col m-1">
-									<label for="">Contraseña</label>
-     								<input type="password" id="password" class="form-control" placeholder="Contraseña">
-    							</div>
-							</div>
-							<div class="form-row m-1">
-								<div class="col"></div>
-								<div class="col m-1">
-									<a href="index.php" class="btn btn-success d-block">Ingresar</a>
-								</div>
-								<div class="col m-1">
-									<span class="btn btn-primary d-block" id="registrarNuevo">Registrar</span>
-								</div>
-								<div class="col"></div>
-							</div>
-							
-						</form>
-					</div>
+					<h1 class="text-dark text-center titulot">SMART MONEY</h1>
+					<p class="text-dark encabezado text-center">Registro de usuario</p>
 				</div>
 			</div>
-			<div class="col-lg-1 col-md-1"></div>
+		</div>
+		<div class="panel panel-body">
+			<form id="frmRegistro">
+				<div class="form-row justify-content-between ">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-3">
+						<label for="">Primer Nombre</label>
+						<input type="text" id="primerNombre" class="form-control" placeholder="Primer Nombre">
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-3">
+						<label for="">Segundo Nombre</label>
+							<input type="text" id="segundoNombre" class="form-control" placeholder="Segundo Nombre">
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-3">
+						<label for="">Primer Apellido</label>
+						<input type="text" id="primerApellido" class="form-control" placeholder="Primer Apellido">
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-3">
+						<label for="">Segundo Apellido</label>
+							<input type="text" id="segundoApellido" class="form-control" placeholder="Segundo Apellido">
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+						<label for="">Numero DNI</label>
+						<input type="text" id="dni" class="form-control" placeholder="DNI">
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+						<label for="">Teléfono</label>
+						<input type="text" id="telefono" class="form-control" placeholder="Teléfono">
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+						<label for="">Fecha Nacimiento</label>
+						<input class="form-control" id="fechaNac" type="date" value="" id="example-date-input">
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+						<label for="">Usuario</label>
+						<input type="text" id="usuario" class="form-control" placeholder="Usuario">
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+						<label for="">Correo Electrónico</label>
+						<input type="text" id="correo" class="form-control" placeholder="Correo electrónico">
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+						<label for="">Contraseña</label>
+						<input type="password" id="password" class="form-control" placeholder="Contraseña">
+					</div>
+				</div>
+				<div class="form-row justify-content-around botones">
+					<div class="col-3 col-sm-2 col-md-2 col-lg-1 col-xl-1">
+						<a href="index.php" class="btn btn-success d-block ">Ingresar</a>
+					</div>
+					<div class="col-3 col-sm-2 col-md-2 col-lg-1 col-xl-1">
+						<span class="btn btn-primary d-block" id="registrarNuevo">Registrar</span>
+					</div>
+				</div>
+			</form>
 		</div>
 	</div>
 
