@@ -1,7 +1,9 @@
 <?php 
-	session_start();
 
-	if(isset($_SESSION['user'])){
+  session_start();
+  
+  if(isset($_SESSION['user']))
+  {
 ?>
 <!DOCTYPE html>
 <html>
@@ -64,6 +66,19 @@
     .chref{
         text-decoration
     }
+    .invertir{
+        border: 0.5px solid black;
+    }
+    .informacionc{
+      font-family: 'Alata', sans-serif;
+    }
+    .btnw{
+      width: 65%;
+      height: 75%;
+    }
+    .infot{
+      font-size:20px;
+    }
   </style>
 </head>
 <body class="fondo">
@@ -75,39 +90,41 @@
     <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="usuario.php">Usuario</a>
     <a class="flex-fill text-center salir nav-link bg-dark m-1 p-2" href="php/salir.php">Salir</a>
   </nav>
-
   <div class="container mt-4">
+
       <div class="row">
-        <h3 class="col-4"></h3>
-        <h3 class="text-center col-md-4 rounded text-light mx-3 py-2 invertir bg-success">Invertir</h3>
-        <h3 class="col-4"></h3>
-      </div>
-      <div class="row">
-          <div class="col-2"></div>
-          <div class="col-8">
-            <div class="row">
-                <div class="col-md-6 col-12 con">
-                    <img src="img/bitcoin.jpg" class="rounded img-fluid imgv" alt="">
-                    <a class="btn botonEnlace" href="#">BITCOIN</a>
-                </div>
-                <div class="col-md-6 col-12 con">
-                    <img src="img/cambio.jpg" class="rounded img-fluid imgv" alt="">
-                    <a class="btn botonEnlace" href="divisas.php">DIVISAS</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-12 con">
-                    <img src="img/beneficio.jpg" class="rounded img-fluid imgv" alt="">
-                    <a class="btn botonEnlace" href="#">BONOS</a>
-                </div>
-                <div class="col-md-6 col-12 con">
-                    <img src="img/visualiza.jpg" class="rounded img-fluid imgv" alt="">
-                    <a class="btn botonEnlace" href="#">ACCIONES</a>
-                </div>
-            </div>
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <h3 class="text-center rounded text-light py-2 invertir bg-warning">Contáctanos</h3>
           </div>
-          <div class="col-2"></div>
+          <div class="col-md-4"></div>
+        </div>
       </div>
+
+      <div class="container-fluid mt-2">
+        <div class="row">
+          <div class="col-12 text-center text-light col-md-12">
+            <h2 class="informacionc">Si tienes dudas con tu experiencia en Smart Money tienes a tu disposición los siguientes canales para enviarnos tus consultas.</h2>
+        </div>
+      </div></div>
+
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col-md-4 text-center">
+            <a href="https://wa.me/51979204403" target="_blank"><img src="img/whatsappimg.png" class="btnw img-fluid" alt="whatsapp" srcset=""></a>
+            <p class="text-light infot m-2 informacionc">Llámanos o contáctanos al Whatsapp.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <a href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank"><img src="img/gmailok.png" class="btnw img-fluid" alt="gmail" srcset=""></a>
+            <p class="text-light m-2 infot informacionc">Envíanos un correo al Gmail.</p>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+
+
+
   </div>
   
 

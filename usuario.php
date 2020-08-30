@@ -1,7 +1,11 @@
 <?php 
-	session_start();
 
-	if(isset($_SESSION['user'])){
+  session_start();
+  
+  $myusuario = $_SESSION['user'];
+  $myusuario = strtoupper($myusuario);
+  if(isset($_SESSION['user']))
+  {
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,7 +32,7 @@
       background-repeat: no-repeat;
       background-size: cover;
       width:auto;
-      height: 100%;
+      height: 100vh;
     }
     .navegacion{
       border-bottom: 2px solid black;
@@ -64,6 +68,8 @@
     .chref{
         text-decoration
     }
+
+
   </style>
 </head>
 <body class="fondo">
@@ -75,11 +81,10 @@
     <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="usuario.php">Usuario</a>
     <a class="flex-fill text-center salir nav-link bg-dark m-1 p-2" href="php/salir.php">Salir</a>
   </nav>
-
   <div class="container mt-4">
       <div class="row">
         <h3 class="col-4"></h3>
-        <h3 class="text-center col-md-4 rounded text-light mx-3 py-2 invertir bg-success">Invertir</h3>
+        <h3 class="text-center col-md-4 rounded text-light mx-3 py-2 invertir bg-primary"><?php echo $myusuario ?></h3>
         <h3 class="col-4"></h3>
       </div>
       <div class="row">
@@ -87,22 +92,22 @@
           <div class="col-8">
             <div class="row">
                 <div class="col-md-6 col-12 con">
-                    <img src="img/bitcoin.jpg" class="rounded img-fluid imgv" alt="">
-                    <a class="btn botonEnlace" href="#">BITCOIN</a>
+                    <img src="img/datos.jpg" class="rounded img-fluid imgv" alt="">
+                    <a class="btn botonEnlace" href="#">DATOS</a>
                 </div>
                 <div class="col-md-6 col-12 con">
-                    <img src="img/cambio.jpg" class="rounded img-fluid imgv" alt="">
-                    <a class="btn botonEnlace" href="divisas.php">DIVISAS</a>
+                    <img src="img/historial.jpg" class="rounded img-fluid imgv" alt="">
+                    <a class="btn botonEnlace" href="#">HISTORIAL</a>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 col-12 con">
-                    <img src="img/beneficio.jpg" class="rounded img-fluid imgv" alt="">
-                    <a class="btn botonEnlace" href="#">BONOS</a>
+                    <img src="img/cupon.jpg" class="rounded img-fluid imgv" alt="">
+                    <a class="btn botonEnlace" href="#">CUPÓN</a>
                 </div>
                 <div class="col-md-6 col-12 con">
-                    <img src="img/visualiza.jpg" class="rounded img-fluid imgv" alt="">
-                    <a class="btn botonEnlace" href="#">ACCIONES</a>
+                    <img src="img/contacto.jpg" class="rounded img-fluid imgv" alt="">
+                    <a class="btn botonEnlace" href="contacto.php">CONTACTO</a>
                 </div>
             </div>
           </div>
