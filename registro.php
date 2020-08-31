@@ -4,7 +4,8 @@
 	<title>Registro</title>
 	<?php require_once "php/scripts2.php"; ?>
 	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-	<style>
+
+<style>
 	.fondoRegistro{
 		background-image: url("img/fondoRegist2.jpg");
         background-repeat: no-repeat;
@@ -20,6 +21,7 @@
 		font-family: 'Russo One', sans-serif;
 	}
 </style>
+
 </head>
 <body class="fondoRegistro">
 	<div class="container-fluid">
@@ -87,10 +89,10 @@
 
 				<div class="form-row justify-content-around botones my-3">
 					<div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-						<a href="index.php" class="btn btn-success d-block">Ingresar</a>
+						<a href="index.php" class="btn btn-danger d-block">Volver al inicio</a>
 					</div>
 					<div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-						<span class="btn btn-primary d-block" id="registrarNuevo">Registrar</span>
+						<span class="btn btn-success d-block" id="registrarNuevo">Registrarse</span>
 					</div>
 				</div>
 
@@ -105,7 +107,7 @@
 		$('#registrarNuevo').click(function(){
 
 			if($('#nombres').val()==""){
-				alertify.alert("Debes agregar el primer nombre");
+				alertify.alert("Debes agregar el nombre");
 				return false;
 			}else if($('#primerApellido').val()==""){
 				alertify.alert("Debes agregar el primer apellido");

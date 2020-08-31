@@ -32,7 +32,7 @@
       background-repeat: no-repeat;
       background-size: cover;
       width:auto;
-      height: 100vh;
+      height: 100%;
     }
     .navegacion{
       border-bottom: 2px solid black;
@@ -93,7 +93,7 @@
                 </div>
                 <div class="col-md-6 col-12 con">
                     <img src="img/historial.jpg" class="rounded img-fluid imgv" alt="">
-                    <a class="btn botonEnlace" href="#">HISTORIAL</a>
+                    <a class="btn botonEnlace" href="historial.php">HISTORIAL</a>
                 </div>
             </div>
             <div class="row">

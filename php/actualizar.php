@@ -1,56 +1,66 @@
 <?php 
-
+	
 	require_once "conexion.php";
+
+
 	$conexion=conexion();
 
-		$primerNombre=$_POST['primerNombre'];
-		$segundoNombre=$_POST['segundoNombre'];
+		$nombres=$_POST['nombres'];
 		$primerApellido=$_POST['primerApellido'];
 		$segundoApellido=$_POST['segundoApellido'];
 		$dni=$_POST['dni'];
 		$telefono=$_POST['telefono'];
-		$usuario=$_POST['usuario'];
 		$password=sha1($_POST['password']);
-		$correo=$_POST['correo'];
+		$usuarioSesion=$_POST['usuarioSesion'];
+		
 
-		if(buscaRepetido($usuario,$correo,$dni,$conexion)==9){
+		if(buscaRepetido($dni,$telefono,$conexion)==9){
 			echo 2;
-		}else if(buscaRepetido($usuario,$correo,$dni,$conexion)==8){
+		}else if(buscaRepetido($dni,$telefono,$conexion)==8){
 			echo 99;
-		}else if(buscaRepetido($usuario,$correo,$dni,$conexion)==10){
-			echo 100;
-		}
-		else{
-			$sql="INSERT into usuarios (primerNombre,segundoNombre,primerApellido,segundoApellido,dni,telefono,usuario,password,correo)
-				values ('$primerNombre','$segundoNombre','$primerApellido','$segundoApellido','$dni','$telefono','$usuario','$password','$correo')";
+		}else{
+			$sql= "UPDATE usuarios set nombres = '$nombres', primerApellido = '$primerApellido', segundoApellido = '$segundoApellido', dni = '$dni', telefono = '$telefono', password = '$password' WHERE usuario = '$usuarioSesion'";
+
 			echo $result=mysqli_query($conexion,$sql);
 		}
 
-		function buscaRepetido($user,$corr,$dn,$conexion){
+		function buscaRepetido($dn,$telf,$conexion){
 			
-			$sql="SELECT * from usuarios where usuario='$user'";
+			/*$sql="SELECT * from usuarios where dni='$dn'";
 
-			$sql2="SELECT * from usuarios where correo='$corr'";
+			$sql2="SELECT * from usuarios where telefono='$telf'";*/
 
-			$sql3="SELECT * from usuarios where dni='$dn'";
+			$sql3 = "SELECT COUNT(*) FROM usuarios WHERE dni = '$dn'";
+
+			$sql4 = "SELECT COUNT(*) FROM usuarios WHERE telefono = '$telf'";
 			
-			$result=mysqli_query($conexion,$sql);
+			/*$result = mysqli_query($conexion,$sql);
 
-			$result2=mysqli_query($conexion,$sql2);
+			$result2 = mysqli_query($conexion,$sql2);*/
 
-			$result3=mysqli_query($conexion,$sql3);
 			
-			
-			if(mysqli_num_rows($result) > 0){
+			$result3 = mysqli_query($conexion,$sql3);
+
+			$result4 = mysqli_query($conexion,$sql4);
+
+			/*if(mysqli_num_rows($result) > 1){
 				return 9;
-			}else if(mysqli_num_rows($result2) > 0){
+			}else if(mysqli_num_rows($result2) > 1){
 				return 8;
-			}
-			else if(mysqli_num_rows($result3) > 0){
-				return 10;
 			}
 			else{
 				return 0;
+			}*/
+
+			if(mysqli_num_rows($result3) > 1){
+				return 9;
+			}else if(mysqli_num_rows($result4) > 1){
+				return 8;
 			}
+			else{
+				return 0;
+			};
+
+
 		}
  ?>

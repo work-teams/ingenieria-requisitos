@@ -52,7 +52,7 @@
 
 <div class="container bg-light p-3 border mt-3 rounded">
 	<div class="row mb-4">
-		<div class="col-md-6 col-lg-5">
+		<div class="col-md-12 col-lg-5 col-12">
 			<h2 class="ml-4">Conversor de Divisas</h2>
 			<form id="frmajax" method="POST" id="">
 
@@ -94,7 +94,7 @@
 				</div>
 
 				<div>
-					<button class="btn ml-4 btn-success" id="registrarCompra">Agregar</button>
+					<button class="btn ml-4 btn-success" id="registrarCompra">Comprar</button>
 					<a href="invertir.php" class="btn btn-danger">Cancelar</a>
 				</div>
 
@@ -102,7 +102,7 @@
 
 		</div>
 
-		<div class="col-md-6 mt-4 col-lg-7">
+		<div class="d-none d-lg-block col-md-6 mt-4 col-lg-7">
 			<img src="img/divisasok.jpg" class="img-fluid rounded" alt="fondo">
 		</div>
 
@@ -131,8 +131,8 @@
 				var a=document.getElementById("a").value;
 				var aleatorio = Math.random();
 				var aleatorio2 = Math.round(aleatorio*100)/100;
-				var dolar = 3+aleatorio2;
-				var euro = 4+aleatorio2;
+				var dolar = (3+aleatorio2).toFixed(2);
+				var euro = (4+aleatorio2).toFixed(2);
 
 				var extrae = document.getElementById("cantidad").value;
 
@@ -281,10 +281,20 @@
 
 		$(document).ready(function(){
 			$("#registrarCompra").click(function(){
+
+				if($('#cantidad').val()==""){
+				alertify.alert("Agregue una cantidad");
+					return false;
+				}
+
 				cadena="descuento=" + $('#descuento').val() +
 					"&dolar=" + $('#dolar').val() +
 					"&euro=" + $('#euro').val() +
 					"&resultado2=" + $('#resultado2').val();
+
+				pago = $('#descuento').val();
+				valorcomprado = $('#resultado2').val();
+				
 
 				$.ajax({
 					type:"POST",
@@ -295,7 +305,7 @@
 							$('#frmajax')[0].reset();
 							$('#resultado').text("Resultado: 0.00");
 							$('#costo').text("");
-							alertify.alert("Compra hecha con éxito.");
+							alertify.alert("Compra hecha con éxito.<br>" + "Monto pagado: " + pago + "<br>Monto comprado: " + valorcomprado);
 						}else{
 							alertify.alert("Algo falló.");
 						}
