@@ -2,25 +2,9 @@
 <html>
 <head>
 	<title>Registro</title>
-	<?php require_once "php/scripts2.php"; ?>
+	<?php require_once "php/scripts.php"; ?>
 	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-
-<style>
-	.fondoRegistro{
-		background-image: url("img/fondoRegist2.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-		width:auto;
-		height: 100%;
-	}
-	.encabezado{
-		font-size: 30px;
-		font-weight: bold;
-	}
-	.titulot{
-		font-family: 'Russo One', sans-serif;
-	}
-</style>
+	<link rel="stylesheet" href="css/registro.css">
 
 </head>
 <body class="fondoRegistro">
@@ -138,6 +122,9 @@
 				return false;
 			}else if($('#correo').val()==""){
 				alertify.alert("Debes agregar el correo");
+				return false;
+			}else if($('#password').val().length<6){
+				alertify.alert("Por tu seguridad, usa una contraseña de al menos 6 dígitos");
 				return false;
 			}
 
