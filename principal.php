@@ -22,28 +22,52 @@
 
 </head>
   <body class="fondo">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="Principal.php" class="navbar-brand text-white">SmartMoney</a>
+        <button class= "navbar-toggler" data-target="#menu" data-toggle="collapse" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a href="invertir.php" class="nav-link">Invertir</a>
+            </li>
+            <li class="nav-item active">
+              <a href="grafico.php" class="nav-link">Gráficos</a>
+            </li>
+            <li class="nav-item active">
+              <a href="usuario.php" class="nav-link">Usuario</a>
+            </li>
+          </ul>
+            <span class="navbar-text">
+              <a href="php/salir.php" class="nav-link">Cerrar sesión</a>
+            </span>		
+        </div>
+      </nav>
+      <div class="mt-3">
+        <section class="">
+            <article>
+                <hgroup class="titulo">
+                    <h1 class="text-light titulop">Smart Money</h1>
+                    <h2 id="peque" class="text-light titulop">Curso: Ingeniería de requisitos</h2>
+                    <img src="img/fisi.png"/>
+                    <a class="dir" href="https://sistemas.unmsm.edu.pe/">Ir a FISI</a>
+                </hgroup>
+            </article>
+        </section>
+      </div>
+
     
-    <nav class="nav nav-pills navegacion flex-column bg-dark flex-sm-row">
-      <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="#">SmartMoney</a>
-      <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="invertir.php">Invertir</a>
-      <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="grafico.php">Gráficos</a>
-      <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="usuario.php">Usuario</a>
-      <a class="flex-fill text-center salir nav-link bg-dark m-1 p-2" href="php/salir.php">Salir</a>
-
-    </nav>
-
-    <div class="mt-3">
-      <section class="">
-          <article>
-              <hgroup class="titulo">
-                  <h1 class="text-light titulop">Smart Money</h1>
-                  <h2 id="peque" class="text-light titulop">Curso: Ingeniería de requisitos</h2>
-                  <img src="img/fisi.png"/>
-                  <a class="dir" href="https://sistemas.unmsm.edu.pe/">Ir a FISI</a>
-              </hgroup>
-          </article>
-      </section>
+    
     </div>
+
+
+  
+
+
+
+
   </body>
 </html>
 
