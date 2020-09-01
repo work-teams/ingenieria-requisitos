@@ -1,0 +1,14 @@
+.fondoRegistro{
+    background-image: url("../img/fondoRegist2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:auto;
+    height: 100%;
+}
+.encabezado{
+    font-size: 30px;
+    font-weight: bold;
+}
+.titulot{
+    font-family: 'Russo One', sans-serif;
+}

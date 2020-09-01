@@ -12,81 +12,14 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 	<title>Smart Money</title>
 
-  <?php require_once "php/scripts2.php";?>
+  <?php require_once "php/scripts.php";?>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
   <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-  <style>
-    .nav a{
-      color: white;
-      text-decoration-style: none;
-      font-family: 'Alata', sans-serif;
-      font-size: 19px;
-    }
-    .nav a:hover{
-      transition: 1.1s;
-    }
-    .carr{
-      font-family: 'Alata', sans-serif;
-      font-size: 35px;
-      -webkit-text-stroke: 0.5px black;
-      color: transparent;
-      font-weight: bold;
-    }
-    .fondo{
-      background-image: url(img/image.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      width:auto;
-      height: 100%;
-    }
-    .navegacion{
-      border-bottom: 2px solid black;
-    }
+  <link rel="stylesheet" href="css/principal.css">
 
-    .titulo{
-      padding: 15px;
-      text-align: center;
-    }
-
-    #peque{
-      font-size: 25px;
-    }
-
-    .volverini:hover{
-      color:white;
-    }
-    img {
-        width: 700px;
-        margin: 20px auto;
-        display: block;
-        border: 3px solid black;
-        background-color: #948f8f;
-    }
-    .dir{
-        font-size: 40px;
-        color:white;
-    }
-    footer {
-      position: absolute;
-      bottom: 0px;
-      height: 40px;
-      border: 1px solid #000;
-      background: #0d0c0c;
-      text-align: center;
-      color: #fff;
-      width: 100%;
-      padding: 6px;
-    }
-    .define{
-      background-color: black;
-    }
-    .titulop{
-      font-family: 'Alata', sans-serif;
-    }
-  </style>
 </head>
   <body class="fondo">
     
@@ -111,12 +44,6 @@
           </article>
       </section>
     </div>
-    
-
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>
 
