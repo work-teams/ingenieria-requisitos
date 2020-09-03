@@ -6,14 +6,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 	<title>Smart Money</title>
 	<?php require_once "php/scripts.php";?>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/contacto.css">
+  <link rel="stylesheet" href="css/contacto2.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body class="fondo">
@@ -41,8 +40,8 @@
       </div>	
     </div>
 </nav>
+<div class="container mt-4">
 
-<div class="container-fluid">
       <div class="row">
           <div class="col-md-4"></div>
           <div class="col-md-4">

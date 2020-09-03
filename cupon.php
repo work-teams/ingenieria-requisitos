@@ -46,12 +46,7 @@
 </nav>
 <div class="container-fluid">
     <div class="row mt-5">
-      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-        <img src="img/enconstruccion.png" class="img-fluid rounded mb-2" alt="">
-      </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-2 bg-light">
-        <img src="img/colocar.png" class="img-fluid rounded"  alt="">
-      </div>
+      
     </div>
 </div>
 
