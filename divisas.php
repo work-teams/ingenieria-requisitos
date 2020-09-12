@@ -6,6 +6,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
 	<title>Smart Money</title>
 	<?php require_once "php/scripts.php";?>
 	<meta charset="UTF-8">
@@ -16,71 +22,85 @@
 
 </head>
 <body class="fondo">
-
-<nav class="nav nav-pills navegacion flex-column bg-dark flex-sm-row">
-    <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="principal.php">SmartMoney</a>
-    <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="invertir.php">Invertir</a>
-    <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="grafico.php">Gráficos</a>
-    <a class="flex-fill text-center nav-link bg-dark m-1 p-2" href="usuario.php">Usuario</a>
-    <a class="flex-fill text-center salir nav-link bg-dark m-1 p-2" href="php/salir.php">Salir</a>
+<nav class="navbar pb-1 pt-1 navbar-expand-lg navbar-dark bg-dark mb-2 text-center">
+    <a href="Principal.php" class="navbar-brand text-white text-center mr-3 px-3">SmartMoney</a>
+    <button class= "navbar-toggler" data-target="#menu" data-toggle="collapse" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav mr-auto">
+      	<li class="nav-item active mx-5 px-3">
+      		<a href="invertir.php" class="nav-link" style="font-size:18px;">Invertir</a>
+        </li>
+        <li class="nav-item active mx-5 px-3">
+      		<a href="grafico.php" class="nav-link " style="font-size:18px;">Gráficos</a>
+      	</li>
+      	<li class="nav-item active" style="">
+      		<a href="usuario.php" class="nav-link mx-5 px-3" style="font-size:18px;">Usuario</a>
+      	</li>
+      </ul>
+      <div class="text-center">
+        <li class="navbar-text">
+          <a href="php/salir.php" style="font-size:18px;" class="nav-link">Cerrar sesión</a>
+        </li>	
+      </div>	
+    </div>
 </nav>
-
-<div class="container bg-light p-3 border mt-3 rounded">
-	<div class="row mb-4">
-		<div class="col-md-12 col-lg-5 col-12">
-			<h2 class="ml-4">Conversor de Divisas</h2>
-			<form id="frmajax" method="POST" id="">
-
-				<div class="form-group col-md-8 ml-3">
-					<label for="cantidad">Cantidad</label>
-					<input type="number" class="form-control" id="cantidad" name="cantidad" onchange="convertir()" min="1" required>
+	
+	<div class="container-fluid">
+		<div class="bg-light p-3 border mt-3 rounded">
+			<div class="row mb-2">
+				<div class="col-md-12 col-lg-5 col-12">
+					<h2 class="ml-4">Conversor de Divisas</h2>
+					<form id="frmajax" method="POST" id="">
+						<div class="form-group col-md-8 ml-3">
+							<label for="cantidad">Cantidad</label>
+							<input type="number" class="form-control" id="cantidad" name="cantidad" onchange="convertir()" min="1" required>
+						</div>
+						<div class="dropdown col-md-8 ml-3 mb-2">
+							<label for="Convertird">Calcular de:</label>
+						<div>
+							<select class="btn btn-primary dropdown-toggle ml-1 px-4" data-toggle="dropdown" id="de" onchange="convertir()">
+								<option value="1">Soles</option>
+								<option value="2">Dolares</option>
+								<option value="3">Euros</option>
+							</select>
+						</div>
 				</div>
-
-				<div class="dropdown col-md-8 ml-3 mb-2">
-					<label for="Convertird">Calcular de:</label>
-					<div>
-						<select class="btn btn-primary dropdown-toggle ml-1 px-4" data-toggle="dropdown" id="de" onchange="convertir()">
-							<option value="1">Soles</option>
-							<option value="2">Dolares</option>
-							<option value="3">Euros</option>
-						</select>
-					</div>
-				</div>
-
 				<div class="dropdown col-md-8 ml-3 mb-2">
 					<label for="Convertira">Calcular a:</label>
-					<div>
-						<select class="btn btn-primary dropdown-toggle ml-1 px-4" data-toggle="dropdown" id="a" onchange="convertir()">
-							<option value="1">Soles</option>
-							<option value="2">Dolares</option>
-							<option value="3">Euros</option>
-						</select>
+						<div>
+							<select class="btn btn-primary dropdown-toggle ml-1 px-4" data-toggle="dropdown" id="a" onchange="convertir()">
+								<option value="1">Soles</option>
+								<option value="2">Dolares</option>
+								<option value="3">Euros</option>
+							</select>
+						</div>
 					</div>
-				</div>
 
-				<label class="font-weight-bolder mt-1 mb-3 ml-3 col-md-4 mb-1" id="resultado">Resultado: 0.00</label>
-				<label class="font-weight-bolder mb-3 col-md-8 ml-3 mb-1" id="costo"></label>
+					<label class="font-weight-bolder mt-1 mb-3 ml-3 col-md-4 mb-1" id="resultado">Resultado: 0.00</label>
+					<label class="font-weight-bolder mb-3 col-md-8 ml-3 mb-1" id="costo"></label>
 
-				<div class="auto" id="auto" style="display:none">
-					<input class="ml-3" id="dolar" name="dolar"></input>
-					<input class="ml-3" id="euro" name="euro"></input>
-					<input class="ml-3" id="descuento" name="descuento"></input>
-					<input class="ml-3" name="resultado2" id="resultado2"></input>
-				</div>
+					<div class="auto" id="auto" style="display:none">
+						<input class="ml-3" id="dolar" name="dolar"></input>
+						<input class="ml-3" id="euro" name="euro"></input>
+						<input class="ml-3" id="descuento" name="descuento"></input>
+						<input class="ml-3" name="resultado2" id="resultado2"></input>
+					</div>
 
-				<div>
-					<button class="btn ml-4 btn-success" id="registrarCompra">Comprar</button>
-					<a href="invertir.php" class="btn btn-danger">Cancelar</a>
-				</div>
+					<div>
+						<button class="btn ml-4 btn-success" id="registrarCompra">Comprar</button>
+						<a href="invertir.php" class="btn btn-danger">Cancelar</a>
+					</div>
 
-			</form>
+					</form>
 
+			</div>
+
+			<div class="d-none d-lg-block col-md-6 mt-2 col-lg-7">
+				<img src="img/divisasok.jpg" class="img-fluid rounded" alt="fondo">
+			</div>
 		</div>
-
-		<div class="d-none d-lg-block col-md-6 mt-4 col-lg-7">
-			<img src="img/divisasok.jpg" class="img-fluid rounded" alt="fondo">
-		</div>
-
 	</div>
 	
 </div>
