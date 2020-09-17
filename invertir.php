@@ -61,7 +61,7 @@
             <div class="row">
                 <div class="col-md-6 col-12 con">
                     <img src="img/bitcoin.jpg" class="rounded img-fluid imgv" alt="" style="border: 1px solid black">
-                    <a class="btn botonEnlace" href="#">BITCOIN</a>
+                    <a class="btn botonEnlace" href="criptomoneda.php">CRIPTOMONEDA</a>
                 </div>
                 <div class="col-md-6 col-12 con">
                     <img src="img/cambio.jpg" class="rounded img-fluid imgv" alt="" style="border: 1px solid black">

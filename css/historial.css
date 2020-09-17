@@ -1,21 +1,9 @@
-.nav a{
-    color: white;
-    text-decoration-style: none;
-    font-family: 'Alata', sans-serif;
-    font-size: 19px;
-}
-.nav a:hover{
-    transition: 1.1s;
-}
 .fondo{
     background-image: url(../img/image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width:auto;
     height: 100%;
-}
-.navegacion{
-    border-bottom: 2px solid black;
 }
 .imgmodificar{
     width: 90%;

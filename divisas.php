@@ -1,7 +1,9 @@
 <?php 
 	session_start();
+	$usuario = $_SESSION['user'];
 
 	if(isset($_SESSION['user'])){
+		$usuario = $_SESSION['user'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -86,6 +88,7 @@
 						<input class="ml-3" id="euro" name="euro"></input>
 						<input class="ml-3" id="descuento" name="descuento"></input>
 						<input class="ml-3" name="resultado2" id="resultado2"></input>
+						<input class="ml-3" name="usuario" value="<?php echo $usuario; ?>" id="usuario"></input>
 					</div>
 
 					<div>
@@ -207,7 +210,8 @@
 				cadena="descuento=" + $('#descuento').val() +
 					"&dolar=" + $('#dolar').val() +
 					"&euro=" + $('#euro').val() +
-					"&resultado2=" + $('#resultado2').val();
+					"&resultado2=" + $('#resultado2').val() +
+					"&usuario=" + $('#usuario').val();
 
 				pago = $('#descuento').val();
 				valorcomprado = $('#resultado2').val();			
@@ -221,9 +225,11 @@
 							$('#frmajax')[0].reset();
 							$('#resultado').text("Resultado: 0.00");
 							$('#costo').text("");
+							console.log(cadena);
 							alertify.alert("Compra hecha con éxito.<br>" + "Monto pagado: " + pago + "<br>Monto comprado: " + valorcomprado);
 						}else{
 							alertify.alert("Algo falló.");
+							console.log(cadena);
 						}
 					}
 				});
