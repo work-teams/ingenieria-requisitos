@@ -22,7 +22,21 @@
 		else{
 			$sql="INSERT into usuarios (nombres,primerApellido,segundoApellido,dni,telefono,usuario,password,correo)
 				values ('$nombres','$primerApellido','$segundoApellido','$dni','$telefono','$usuario','$password','$correo')";
-			echo $result=mysqli_query($conexion,$sql);
+			$sql2 = "CREATE TABLE `$usuario` (
+				`id` int(22) NOT NULL,
+				`precioDolar` float NOT NULL,
+				`precioEuro` float NOT NULL,
+				`compra` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+				`fecha` timestamp NOT NULL DEFAULT current_timestamp(),
+				`descuento` varchar(22) COLLATE utf8_unicode_ci NOT NULL
+			  ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci";
+
+			$result2=mysqli_query($conexion,$sql2);
+			$result=mysqli_query($conexion,$sql);
+			if ($result == 1 and $result2 == 1) {
+				
+				echo $result;
+			}
 		}
 
 		function buscaRepetido($user,$corr,$dn,$conexion){

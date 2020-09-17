@@ -6,16 +6,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
   <title>Smart Money</title>
-	<?php require_once "php/scripts.php";?>
+
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<?php require_once "php/scripts.php";?>
   <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/grafico.css">
   
 </head>
@@ -44,17 +44,68 @@
       </div>	
     </div>
 </nav>
-  <div class="container-fluid">
+<div class="container-fluid">
 
   <div class="row">
-        <h3 class="col-4"></h3>
-        <h3 class="text-center col-md-4 rounded text-light mx-3 py-0 invertir bg-primary mb-0">Gráficos</h3>
-        <h3 class="col-4"></h3>
-      </div>
-    
-  </div>
 
-</body>
+    <div class="col-xl-3" id="laterales">
+      <img src="img/lateralGrafico.jpg" class="img-fluid rounded" style="height:85vh" alt="">
+    </div>
+
+    <div class="col-xl-6">
+      <h3 class="bg-primary text-center text-light">Setiembre: Dólar vs Euro</h3>
+      <div id="grafica">
+      </div>
+    </div>
+
+    <div class="col-xl-3" id="laterales">
+      <img src="img/smartmoneyinfo.png" class="img-fluid rounded" style="height:85vh" alt="">
+    </div>
+  </div>
+    
+</div>
+  <script type="text/javascript">
+        var trace1 = {
+          y: [3.54,3.53,3.54,3.55,3.55,3.55,3.55,3.53,3.54,3.54,3.55,3.57,3.57,3.57, 3.56, 3.5, 3.53],
+          x: [01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16],
+          type: 'scatter',
+          name: 'Dolar',
+          line: {
+            color: 'green',
+            width: 2
+          }
+        };
+
+        var trace2 = {
+          y: [4.25,4.18,4.21,4.21,4.21,4.21,4.17,4.17,4.17,4.16,4.19,4.20,4.20,4.24,4.24,4.21],
+          x: [01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16],
+          type: 'scatter',
+          name: 'Euro',
+          line: {
+            color: 'black',
+            width: 2
+          }
+        };
+        var layout = {
+          title:'Presione "Euro" o "Dólar" para ocultar o mostrar valores',
+          xaxis: {
+            title: 'Día de Setiembre'
+          },
+          yaxis: {
+            title: 'Precio en Soles'
+          }
+        };
+
+        var data = [trace2,trace1];
+
+        Plotly.newPlot('grafica', data,layout);
+
+  </script>
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>
 
 <?php

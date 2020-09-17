@@ -47,8 +47,10 @@
       </div>	
     </div>
 </nav>
-  <div class="container-fluid">
-      <div class="row py-2">
+    <div id="actualiza">
+    </div>
+  <div class="container-fluid"> 
+      <div class="row py-4">
           <div class="col-12 col-sm-12 col-md-12 col-xl-12 col-lg-12">
               <h1 class="text-light text-center titulop">Smart Money</h1>
           </div>
@@ -58,6 +60,14 @@
       </div>
   </div>
 </body>
+<script type="text/javascript">
+      //este es el metodo que lo mantendra actualizado 
+  $(document).ready(function() {
+    var refreshId =  setInterval( function(){  
+      $('#actualiza').load('refresh.php');//actualizas el div
+      }, 1000);
+    });
+</script>
 </html>
 
 <?php

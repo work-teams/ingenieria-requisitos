@@ -72,8 +72,9 @@
                         <tbody>
                         <?php 
                             $inc = include("php/dbdbd.php");
+                            $usuario = $_SESSION['user'];
                             if ($inc) {
-                                $consulta = "SELECT * FROM divisas ORDER BY id DESC";
+                                $consulta = "SELECT * FROM `$usuario` ORDER BY id DESC";
                                 $resultado = mysqli_query($conex,$consulta);
                                 if ($resultado) {
                                     while ($row = $resultado->fetch_array()) {
