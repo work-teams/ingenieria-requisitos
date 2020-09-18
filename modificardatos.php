@@ -6,18 +6,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 	<title>Smart Money</title>
 	<?php require_once "php/scripts.php";?>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/modificardatos.css">
-  
+    <link rel="stylesheet" href="css/estilosComunes.css">
 </head>
 <body class="fondo">
 
@@ -73,7 +67,7 @@
             <div class="panel panel-body bg-light p-3 rounded my-4">
 
                 <div class="my-3 col-12 text-center">
-                    <button id="aa" value="" class="btn btn-info col-12 invertir"><h4 class="mt-1 text-center">Click para modificar</h4></button>
+                    <button id="aa" value="" class="btn btn-info col-12"><h4 class="mt-1 text-center">Click para modificar</h4></button>
                 </div>
 
                 <form id="frmDatos">
@@ -147,87 +141,7 @@
 
     </div>
   </div>
-
-  <script type="text/javascript">
-
-    $(document).ready(function(){
-        $('#aa').click(function(){
-            $("#nombres").prop( "disabled", false);
-            $("#primerApellido").prop( "disabled", false);
-            $("#segundoApellido").prop( "disabled", false);
-            $("#dni").prop( "disabled", false);
-            $("#telefono").prop( "disabled", false);
-            $("#password1").prop( "disabled", false);
-            $("#password2").prop( "disabled", false);
-
-        })
-    })
-    
-    $(document).ready(function(){
-        $('#guardarDatos').click(function(){
-            if($('#nombres').val()==""){
-				alertify.alert("Debes agregar el nombre");
-				return false;
-			}else if($('#primerApellido').val()==""){
-				alertify.alert("Debes agregar el primer apellido");
-				return false;
-			}else if($('#segundoApellido').val()==""){
-				alertify.alert("Debes agregar el segundo apellido");
-				return false;
-			}else if($('#dni').val()==""){
-				alertify.alert("Debes agregar el DNI");
-				return false;
-			}else if($('#dni').val().length!==8){
-				alertify.alert("El DNI debe contener 8 dígitos");
-				return false;
-			}else if($('#telefono').val().length!==9){
-				alertify.alert("El teléfono debe contener 9 dígitos");
-				return false;
-			}else if($('#telefono').val()==""){
-				alertify.alert("Debes agregar el telefono");
-				return false;
-			}else if($('#password1').val()==""){
-				alertify.alert("Debes agregar la contraseña");
-				return false;
-			}else if($('#password2').val()==""){
-				alertify.alert("Debes agregar la contraseña");
-				return false;
-            }else if($('#password1').val() !== $('#password2').val()){
-				alertify.alert("Las contraseñas no coinciden");
-				return false;
-            }else if($('#password1').val().length < 6){
-				alertify.alert("Usa una contraseña de al menos 6 digitos");
-				return false;
-            }
-            
-            datos = "nombres=" + $('#nombres').val() + "&primerApellido=" + $('#primerApellido').val() + "&segundoApellido=" + $('#segundoApellido').val() + 
-            "&dni=" + $('#dni').val() + 
-            "&telefono=" + $('#telefono').val() + "&password=" + $('#password1').val() + "&usuarioSesion=" + $('#usuarioSesion').val();
-
-            console.log(datos);
-
-            $.ajax({
-                type: "POST",
-                url:"php/actualizar.php",
-                data:datos,
-                success:function(r){
-
-                    if(r==2){
-                        alertify.alert("Este DNI ya se encuentra registrado, ingrese otro por favor.");
-                    }else if(r==99){
-						alertify.alert("Este número de telefono se encuentra registrado, ingrese otro por favor..");
-					}else if(r==1){
-                        alertify.success("Datos modificados con éxito.");
-					}else{
-                        alertify.alert("Datos fallo.");
-					}
-                }
-            });
-
-        });
-    });
-
-  </script>
+  <script src="funcionesJS/modificardatos.js"></script>
 </body>
 </html>
 

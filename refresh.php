@@ -1,6 +1,6 @@
 <div id="actualiza">
-    <h5 style="background-color: #DFD405;color:black;" class="text-center">Valor del BITCOIN en tiempo real</h5>
-    <h5 style="background-color: #DFD405;color:black;" class="px-2 text-center" id="actualiza"><?php
+    <h5 style="background-color: #DFD405;color:black;" class="text-center mx-1 rounded">Valor del BITCOIN en tiempo real</h5>
+    <h5 style="background-color: #DFD405;color:black;" class="px-2 py-1 text-center mx-1 rounded" id="actualiza"><?php
       $url="https://bitpay.com/api/rates";
       $json=json_decode(file_get_contents($url));
       $dollar=$btc=$euro=0;

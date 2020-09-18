@@ -10,12 +10,13 @@
 	<?php require_once "php/scripts.php";?>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/contacto.css">
+  <link rel="stylesheet" href="css/estilosComunes.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
 </head>
 <body class="fondo">
+
 <nav class="navbar pb-1 pt-1 navbar-expand-lg navbar-dark bg-dark mb-2 text-center">
     <a href="Principal.php" class="navbar-brand text-white text-center mr-3 px-3">SmartMoney</a>
     <button class= "navbar-toggler" data-target="#menu" data-toggle="collapse" type="button">
@@ -40,8 +41,8 @@
       </div>	
     </div>
 </nav>
-<div class="container mt-4">
 
+<div class="container mt-4">
       <div class="row">
           <div class="col-md-4"></div>
           <div class="col-md-4">
@@ -63,7 +64,6 @@
         <div class="row">
 
           <div class="col"></div>
-
           <div class="col-md-4 text-center">
             <a href="https://wa.me/51979204403" target="_blank"><img src="img/whatsappimg.png" class="btnw img-fluid" alt="whatsapp" srcset=""></a>
             <p class="text-light infot m-2 informacionc">Llámanos o contáctanos al Whatsapp.</p>
@@ -73,7 +73,6 @@
             <a href="#" type="button" target="" data-toggle="modal" data-target="#exampleModal" data-whatever="SmartMoney"><img src="img/gmailok.png" class="btnw img-fluid" alt="whatsapp" srcset=""></a>
             <p class="text-light m-2 infot informacionc">Envíanos un correo electrónico.</p>
           </div>
-
           <div class="col"></div>
 
         </div>
@@ -114,16 +113,7 @@
       </div>
       </div>
   </div>
-
-  <script type="text/javascript">
-  $('#exampleModal').on('show.bs.modal', function (event) {
-  var button = $(event.relatedTarget)
-  var recipient = button.data('whatever')
-  var modal = $(this)
-  modal.find('.modal-title').text('Nuevo mensaje para ' + recipient)
-  });
-  </script>
-  
+  <script src="funcionesJS/contacto.js"></script>
 </body>
 </html>
 
