@@ -25,32 +25,14 @@
 		}
 
 		function buscaRepetido($dn,$telf,$conexion){
-			
-			/*$sql="SELECT * from usuarios where dni='$dn'";
-
-			$sql2="SELECT * from usuarios where telefono='$telf'";*/
 
 			$sql3 = "SELECT COUNT(*) FROM usuarios WHERE dni = '$dn'";
 
 			$sql4 = "SELECT COUNT(*) FROM usuarios WHERE telefono = '$telf'";
 			
-			/*$result = mysqli_query($conexion,$sql);
-
-			$result2 = mysqli_query($conexion,$sql2);*/
-
-			
 			$result3 = mysqli_query($conexion,$sql3);
 
 			$result4 = mysqli_query($conexion,$sql4);
-
-			/*if(mysqli_num_rows($result) > 1){
-				return 9;
-			}else if(mysqli_num_rows($result2) > 1){
-				return 8;
-			}
-			else{
-				return 0;
-			}*/
 
 			if(mysqli_num_rows($result3) > 1){
 				return 9;

@@ -66,7 +66,7 @@
             <div class="row">
                 <div class="col-md-6 col-12 con">
                     <img src="img/cupon.jpg" class="rounded img-fluid imgv" alt="" style="border: 1px solid black">
-                    <a class="btn botonEnlace" href="cupon.php">CUPÓN</a>
+                    <a class="btn botonEnlace" href="#">CUPÓN</a>
                 </div>
                 <div class="col-md-6 col-12 con">
                     <img src="img/contacto.jpg" class="rounded img-fluid imgv" alt="" style="border: 1px solid black">

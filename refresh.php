@@ -3,7 +3,7 @@
     <h5 style="background-color: #DFD405;color:black;" class="px-2 py-1 text-center mx-1 rounded" id="actualiza"><?php
       $url="https://bitpay.com/api/rates";
       $json=json_decode(file_get_contents($url));
-      $dollar=$btc=$euro=0;
+      $btc0;
       foreach($json as $obj){
         if($obj->code=='USD') $btc = $obj->rate;
         if($obj->code=='EUR') $btc2 = $obj->rate;

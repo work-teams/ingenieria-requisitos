@@ -1,6 +1,6 @@
 <?php
 
-$conex = mysqli_connect("localhost","root","","smartmoney"); 
+$conex = mysqli_connect("localhost","id14902658_smartmoneydb","&3YqW%CVGl(Nr2Qp","id14902658_smartmoney"); 
 
 ?>
 

@@ -23,12 +23,13 @@
 			$sql="INSERT into usuarios (nombres,primerApellido,segundoApellido,dni,telefono,usuario,password,correo)
 				values ('$nombres','$primerApellido','$segundoApellido','$dni','$telefono','$usuario','$password','$correo')";
 			$sql2 = "CREATE TABLE `$usuario` (
-				`id` int(22) NOT NULL,
+				`id` int(22) NOT NULL AUTO_INCREMENT,
 				`precioDolar` float NOT NULL,
 				`precioEuro` float NOT NULL,
 				`compra` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
 				`fecha` timestamp NOT NULL DEFAULT current_timestamp(),
-				`descuento` varchar(22) COLLATE utf8_unicode_ci NOT NULL
+				`descuento` varchar(22) COLLATE utf8_unicode_ci NOT NULL,
+				PRIMARY KEY (id)
 			  ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci";
 
 			$result2=mysqli_query($conexion,$sql2);
