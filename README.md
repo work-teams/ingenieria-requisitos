@@ -1,4 +1,4 @@
-# SMART MONEY PROTOTIPE
+# SMART MONEY PROTOTYPE
 ## University: Universidad Nacional Mayor de San Marcos
 ## Faculty: Ingenieria de Sistemas e Informatica
 ## School: Escuela Academica de Ingenieria de Software
