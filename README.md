@@ -4,7 +4,7 @@
 ## School: Escuela Academica de Ingenieria de Software
 
 ## Subject: Ingenieria de Requisitos
-## Project: Smart money prototipe
+## Project: Smart money prototype
 ## Cycle: 2020-I
 
 ## Members:
