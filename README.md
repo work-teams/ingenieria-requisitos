@@ -1,7 +1,7 @@
 # SMART-MONEY PROJECT
 Proyecto final para el curso de ingeniería de requisitos.
 
-### Equipo Ingeniería Requisitos
+### Equipo de Ingeniería Requisitos
 > Integrantes
 > - Aquino Limache Cristian  
 > - Cruz Esquivel Jose Manuel  
