@@ -32,7 +32,13 @@
   font-size: 24px;
   margin: 10px;
 }
-
+.subtitulo{
+  display: flex;
+  justify-content: left;
+  font-family: Gotham-Rounded;
+  font-size: 36px;  
+  margin: 20px;
+}
 .user-name{
   display: flex;
   justify-content: center;
@@ -95,15 +101,6 @@
   font-family: "Alata", sans-serif;
 }
 
-/*Requiere historial.php*/
-.imgmodificar2 {
-  width: 90%;
-  height: 45%;
-}
-.tabla {
-  overflow: scroll;
-  height: 480px;
-}
 
 /*Requiere usuario.php*/
 .imgv {
