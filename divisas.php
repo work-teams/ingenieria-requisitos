@@ -13,7 +13,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/estilos1.css">
+	<link rel="stylesheet" href="css/estilosComunes.css">
 
 </head>
 <body>
@@ -26,7 +26,7 @@
             <li><a href="php/salir.php">Salir</a></li>
         </ul>
     </nav>
-	<h1 class="titulo">Conversor de Divisas</h1>
+	<h1 class="title">Conversor de Divisas</h1>
 	<div class="container-fluid">
 		<div class="bg-light p-3 border mt-3 rounded">
 			<div class="row mb-2">
