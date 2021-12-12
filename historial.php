@@ -14,15 +14,17 @@
             <link rel="stylesheet" href="css/estilosComunes.css">
         </head>
         <body>
-            <nav class="barra">
-            <a href="index.php">SmartMoney</a>
-            <a href="invertir.php">Invertir</a>
-            <a href="grafico.php">Graficos</a>
-            <a href="usuario.php">Usuario</a>
-            <a href="php/salir.php">Cerrar Sesion</a>          
-            </nav>  
+        <nav class="navbarzzz">
+        <ul>
+            <li><a href="Principal.php">SmartMoney</a></li>
+            <li><a href="invertir.php">Invertir</a></li>
+            <li><a href="grafico.php">Gráficos</a></li>
+            <li><a href="usuario.php">Usuario</a></li>
+            <li><a href="php/salir.php">Salir</a></li>
+        </ul>
+    </nav>
 
-            <a class="subtitulo m-5">Historial de transacciones</a>
+            <h1 class="title">Historial de transacciones</h1>
 
             <div class="container-fluid mt-5">
                 <div class="row m-0 justify-content-center">
